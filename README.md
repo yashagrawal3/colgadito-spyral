@@ -1,0 +1,4 @@
+Colgadito
+================
+
+Classic hangman game.
