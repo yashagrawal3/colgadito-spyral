@@ -102,6 +102,9 @@ class Scene(object):
         if _GREENLETS_AVAILABLE:
             spyral.event.register('director.update', self._run_actors, 
                                   ('delta',), scene=self)
+        spyral.event.register('system.focus_change', self.redraw)
+        spyral.event.register('system.video_resize', self.redraw)
+        spyral.event.register('system.video_expose', self.redraw)
         spyral.event.register('spyral.internal.view.changed',
                               self._invalidate_views, scene=self)
 
@@ -186,7 +189,9 @@ class Scene(object):
         Internal method for returning all the registered namespaces that are in
         the given namespace.
         """
-        return [n for n in self._namespaces if namespace.startswith(n)]
+        return [n for n in self._namespaces if (namespace == n or
+                                        n.rsplit(".",1)[0].startswith(namespace) or
+                                        namespace.rsplit(".",1)[0].startswith(n))]
 
     def _send_event_to_handler(self, event, type, handler, args,
                                kwargs, priority, dynamic):
