@@ -20,8 +20,7 @@ educación,Los niños, las niñas y los/las adolescentes tienen derecho a una ed
 
 cultura y recreación,Los niños, las niñas y los/las adolescentes tienen derecho al descanso, esparcimiento, al juego y demás actividades recreativas propias de su ciclo vital y a participar en la vida cultural y las artes. Igualmente, tienen derecho a que se les reconozca, respete, y fomente el conocimiento y la vivencia de la cultura a la que pertenezcan.
 
-participación,Los niños, las niñas y los/las adolescentes tienen derecho a participar en las actividades que se realicen en la familia,
-las instituciones educativas, las asociaciones, los programas estatales, departamentales, distritales y municipales que sean de su interés.
+participación,Los niños, las niñas y los/las adolescentes tienen derecho a participar en las actividades que se realicen en la familia, las instituciones educativas, las asociaciones, los programas estatales, departamentales, distritales y municipales que sean de su interés.
 
 asociación y reunión,Los niños,las niñas y los/las adolescentes tienen derecho de reunión y asociación con fines sociales, culturales, deportivos, recreativos, religiosos, políticos o de cualquier otra índole, sin más limitación que las que imponen la ley, las buenas costumbres, la salubridad física o mental y el bienestar del menor. 
 
@@ -33,13 +32,13 @@ admisión al trabajo,La edad mínima de admisión al trabajo es los quince (15) 
 
 libertades fundamentales,Los niños, las niñas y los/las adolescentes gozan de las libertades consagradas en la Constitución Política y en los tratados internacionales de derechos humanos. Forman parte de estas libertades: el libre desarrollo de la personalidad y la autonomía personal, la libertad de conciencia y de creencias, la libertad de cultos, la libertad de pensamiento, la libertad de locomoción; y la libertad para escoger profesión u oficio.
 
-instituciones educativas,Es obligación de las Instituciones Educativas poner en marcha mecanismos para establecer la detección oportuna y el apoyo y la orientación en casos de malnutrición, maltrato, abandono, abuso sexual, violencia intrafamiliar y explotación económica y laboral.
+apoyo y orientacion,Es obligación de las Instituciones Educativas poner en marcha mecanismos para establecer la detección oportuna y el apoyo y la orientación en casos de malnutrición, maltrato, abandono, abuso sexual, violencia intrafamiliar y explotación económica y laboral.
 
-defensorías de familia,Son dependencias de naturaleza multidisciplinaria, encargadas de prevenir, garantizar y restablecer los derechos de los niños, niñas y adolescentes.
+defensorías de familia,Son dependencias del Sistema Nacional de Bienestar Familiar, de naturaleza multidisciplinaria, encargadas de prevenir, garantizar y restablecer los derechos de los niños, niñas y adolescentes.
 
-comisarías de familia, Son entidades distritales o municipales o intermunicipales de carácter administrativo e interdisciplinario,que forman parte del Sistema Nacional de Bienestar Familiar, cuya misión es prevenir, garantizar, restablecer y reparar los derechos de los miembros de la familia conculcados por situaciones de violencia intrafamiliar.
+comisarías de familia, Son entidades distritales o municipales o intermunicipales de carácter administrativo e interdisciplinario, que forman parte del Sistema Nacional de Bienestar Familiar, cuya misión es prevenir, garantizar, restablecer y reparar los derechos de los miembros de la familia conculcados por situaciones de violencia intrafamiliar.
 
-actuación administrativa,El niño, niña o adolescente, o su representante legal, o la persona que lo tenga bajo su cuidado o custodia, podrá solicitar, ante el defensor o comisario de familia o en su defecto ante el inspector de policía, la protección de los derechos de aquel. 
+actuación administrativa,El niño, niña o adolescente, o su representante legal, o la persona que lo tenga bajo su cuidado o custodia, podrá solicitar, ante el defensor o comisario de familia o en su defecto ante el inspector de policía, la protección y el restablecimiento de los derechos que le corresponden. 
 
 
 
