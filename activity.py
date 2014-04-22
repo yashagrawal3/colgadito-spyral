@@ -30,6 +30,9 @@ class Activity(sugar.activity.activity.Activity):
         eb.show()
         self.box.append_page(eb)
 
+        watch = gtk.gdk.Cursor(gtk.gdk.WATCH)
+        self.window.set_cursor(watch)
+
         self._pygamecanvas = sugargame2.canvas.PygameCanvas(self)
         self._pygamecanvas.set_flags(gtk.EXPAND)
         self._pygamecanvas.set_flags(gtk.FILL)

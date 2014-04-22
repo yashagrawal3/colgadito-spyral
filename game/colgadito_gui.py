@@ -7,8 +7,6 @@ import sys
 import os
 import random
 
-from spyral.debug import FPSSprite
-
 SIZE = (1000, 750)
 BG_COLOR = (255, 255, 255)
 FG_COLOR = (0, 0, 0)
@@ -222,7 +220,6 @@ class Game(spyral.Scene):
         self.hangman = Colgadito(self)
         self.tablero = Tablero(self)
         self.descartadas = Descartadas(self)
-        self.fps = FPSSprite(self, (0,0,0))
         self.setup()
 
         pygame.mixer.init()
@@ -241,6 +238,7 @@ class Game(spyral.Scene):
         if activity:
             activity.box.next_page()
             activity._pygamecanvas.grab_focus()
+            activity.window.set_cursor(None)
 
     def setup(self):
         self.frase, self.infodato = nueva_frase()
