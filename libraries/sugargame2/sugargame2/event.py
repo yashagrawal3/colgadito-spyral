@@ -204,6 +204,7 @@ class Translator(object):
 
     def _mousedown_cb(self, widget, event):
         self.__button_state[event.button-1] = 1
+        widget.grab_focus()
         return self._mouseevent(widget, event, pygame.MOUSEBUTTONDOWN)
 
     def _mouseup_cb(self, widget, event):
