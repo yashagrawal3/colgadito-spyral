@@ -5,7 +5,7 @@ import time
 class Mono(spyral.Sprite):
     def __init__(self, scene):
         spyral.Sprite.__init__(self, scene)
-        self.scene = scene
+        #self.scene = scene
         self.image = spyral.Image(filename="images/monkey_normal.png")
         self.grito = pygame.mixer.Sound("sounds/smile.wav")
         self.x = 100
