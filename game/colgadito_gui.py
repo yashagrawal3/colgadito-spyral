@@ -12,6 +12,8 @@ BG_COLOR = (255, 255, 255)
 FG_COLOR = (0, 0, 0)
 GREY = (125, 125, 125)
 
+splash_done = False
+
 def cargar_frases():
     archivo = open("frases.txt", "r")
     frases = []
@@ -111,7 +113,7 @@ class Tablero(spyral.Sprite):
         self.anchor = 'midtop'
 
         self.x = SIZE[0]/2
-        self.y = 50
+        self.y = 120
 
     def set_text(self, text):
         self.image = self.font.render(text)
@@ -222,6 +224,27 @@ class Game(spyral.Scene):
         self.descartadas = Descartadas(self)
         self.setup()
 
+        self.subtitle = spyral.Sprite(self)
+        self.subtitle.image = spyral.Font("fonts/SFDigitalReadout-Medium.ttf", 75).render("ingresa una letra")
+        self.subtitle.anchor = "midtop"
+        self.subtitle.pos = spyral.Vec2D(self.width/2, self.height/2)
+
+        self.subtitle2 = spyral.Sprite(self)
+        self.subtitle2.image = spyral.Font("fonts/SFDigitalReadout-Medium.ttf", 60).render("El objetivo del juego es adivinar la frase.")
+        self.subtitle2.anchor = "midtop"
+        self.subtitle2.pos = spyral.Vec2D(self.width/2, 50)
+
+        self.taller = spyral.Sprite(self)
+        self.taller.image = spyral.Image(filename="images/logo_labs.png")
+        self.taller.pos = (self.width/2+100, self.height-30)
+        self.taller.scale = 1.3
+        self.taller.anchor = "midbottom"
+
+        self.taller2 = spyral.Sprite(self)
+        self.taller2.image = spyral.Image(filename="images/transformando.png")
+        self.taller2.pos = (0, self.height-self.taller.image.height)
+        self.taller2.anchor = "midleft"
+
         pygame.mixer.init()
         self.bonus = pygame.mixer.Sound('sounds/BonusCube_0.ogg')
         self.fallo = pygame.mixer.Sound('sounds/Hurt_0.ogg')
@@ -234,11 +257,28 @@ class Game(spyral.Scene):
 
         spyral.event.register("input.keyboard.down.*", self.procesar_tecla)
         spyral.event.register("system.quit", spyral.director.quit)
+        spyral.event.register("director.scene.enter", self.blink)
 
         if activity:
-            activity.box.next_page()
+            activity.show_game(None)
             activity._pygamecanvas.grab_focus()
             activity.window.set_cursor(None)
+            self.activity = activity
+
+    def blink(self):
+        self.blink_anim = spyral.Animation("visible", spyral.easing.Iterate([True,False]), duration=1, loop=True)
+        self.subtitle.animate(self.blink_anim) 
+        
+        global splash_done
+        if not splash_done:
+            delay = spyral.DelayAnimation(5)
+            moveout = spyral.Animation("y", spyral.easing.Linear(self.taller.y, self.height
+                                                                    + self.taller.height), duration=4)
+            self.taller.animate(delay + moveout)
+            moveout = spyral.Animation("y", spyral.easing.Linear(self.taller2.y, self.height
+                                                                    + self.taller.height/2), duration=5)
+            self.taller2.animate(delay+moveout)
+            splash_done = True
 
     def setup(self):
         self.frase, self.infodato = nueva_frase()
@@ -268,6 +308,10 @@ class Game(spyral.Scene):
         self.descartadas.update(self)
 
     def procesar_tecla(self, key):
+        self.subtitle.stop_animation(self.blink_anim)
+        self.subtitle.visible = False
+        self.subtitle2.visible = False
+
         if not 0<key<255:
             return
 

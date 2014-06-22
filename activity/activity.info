@@ -1,6 +1,6 @@
 [Activity]
 name = Colgadito
-activity_version = 4
+activity_version = 5
 bundle_id = org.somosazucar.hangman
-icon = activity
+icon = activity-colgadito
 exec = sugar-activity activity.Activity
