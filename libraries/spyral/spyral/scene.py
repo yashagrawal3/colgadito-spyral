@@ -48,6 +48,8 @@ class Scene(object):
                         `max_fps` is pulled from the director.
     """
     def __init__(self, size = None, max_ups=None, max_fps=None):
+        if not size:
+            size = pygame.display.get_surface().get_size()
         time_source = time.time
         self.clock = spyral.GameClock(
             time_source=time_source,
@@ -113,8 +115,8 @@ class Scene(object):
         self._views = []
 
         # Loading default styles
-        self.load_style(spyral._get_spyral_path() +
-                        'resources/form_defaults.spys')
+        #self.load_style(spyral._get_spyral_path() +
+        #                'resources/form_defaults.spys')
 
     # Actor Handling
     def _register_actor(self, actor, greenlet):
