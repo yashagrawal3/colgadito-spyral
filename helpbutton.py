@@ -38,7 +38,7 @@ help_palettes['main-toolbar'] = help_box
 help_windows['main-toolbar'] = gtk.ScrolledWindow()
 help_windows['main-toolbar'].set_size_request(
     int(gtk.gdk.screen_width() / 3),
-    gtk.gdk.screen_height() - style.GRID_CELL_SIZE * 5)
+    gtk.gdk.screen_height() - style.GRID_CELL_SIZE * 3)
 help_windows['main-toolbar'].set_policy(
     gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
 help_windows['main-toolbar'].add_with_viewport(
@@ -114,6 +114,17 @@ def add_paragraph(help_box, text, icon=None):
 
     return hbox
 
-add_section(help_box, "Cómo Jugar")
-add_paragraph(help_box, "¡Descubre las frases ocultas!")
+add_section(help_box, "Cómo jugar")
+add_paragraph(help_box, "¡Descubre las frases ocultas y asegúrate de comprender su significado!")
 add_paragraph(help_box, "Presiona cualquier letra para empezar.")
+add_paragraph(help_box, "")
+add_section(help_box, "Taller del Artesano")
+add_paragraph(help_box, "Tu experiencia no es completa hasta que no hayas modificado el programa.")
+add_paragraph(help_box, "")
+add_section(help_box, "Cómo modificar este juego")
+add_paragraph(help_box, "Vista de juego.", icon="gamecanvas")
+add_paragraph(help_box, "Modifica el juego.", icon="view-source")
+add_paragraph(help_box, "Guarda tus cambios.", icon="dialog-ok")
+add_paragraph(help_box, "Reinicia para ver tus cambios en acción.", icon="system-restart")
+add_paragraph(help_box, "La consola permite analizar tu programa y encontrar errores o realizar pruebas.", icon="sources")
+
