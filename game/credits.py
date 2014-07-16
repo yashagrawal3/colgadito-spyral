@@ -77,7 +77,7 @@ class Creditos(spyral.Scene):
                                 Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la Licencia Pública General de GNU para más detalles.\n
                                 Usted debería haber recibido una copia de la Licencia Pública General junto con este programa. Si no ha sido así, consulte <http://www.gnu.org/licenses>."""),
                 Espacio(self, 200),
-                MultiTexto(self, u"Ningún dragón fue lastimado durante la producción de este videojuego.", style="small"),
+                MultiTexto(self, u"\"El derecho a la vida es inviolable; no habrá pena de muerte.\" - Constitución de Colombia, 1991", style="small"),
                 ]
 
         self.leaving = None
